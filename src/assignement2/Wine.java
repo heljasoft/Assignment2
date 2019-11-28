@@ -7,19 +7,30 @@ package assignement2;
  */
 public class Wine extends Product{
     
-    static final double DODATNI_POREZ = 0.1;
+    private double cijena;
     private double zapreminaBoce;
+    private final double DODATNI_POREZ = 0.1;
+    
 
     public Wine(String nazivProizvoda, String barKod, double cijena, double zapreminaBoce) {
-        super(nazivProizvoda, barKod, cijena);
+        super(nazivProizvoda, barKod);
+        this.cijena = cijena + (cijena * POREZ) + (cijena * DODATNI_POREZ);
         this.zapreminaBoce = zapreminaBoce;
     }
 
-    @Override
-    public double konacnaCijena() {
-        return 0.0;
+    public double getCijena() {
+        return cijena;
     }
-    
+
+    public double getZapreminaBoce() {
+        return zapreminaBoce;
+    }
+
+    @Override
+    public String toString() {
+        String rezultat = super.toString();
+        return rezultat + "\nKonacna cijena: "+ cijena + "\nZapremina boce: "+ zapreminaBoce;
+    }
     
     
 }

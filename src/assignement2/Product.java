@@ -11,12 +11,10 @@ public abstract class Product {
     
     private String nazivProizvoda;
     private String barKod;
-    private double cijena;
-
-    public Product(String nazivProizvoda, String barKod, double cijena) {
+    
+    public Product(String nazivProizvoda, String barKod) {
         this.nazivProizvoda = nazivProizvoda;
         this.barKod = barKod;
-        this.cijena = cijena;
     }
 
     public String getNazivProizvoda() {
@@ -27,9 +25,10 @@ public abstract class Product {
         return barKod;
     }
 
-    public double getCijena() {
-        return cijena;
+    @Override
+    public String toString() {
+        return "Ime proizvoda: "+ nazivProizvoda + "\nBar Code: "+ barKod;
     }
     
-    public abstract double konacnaCijena();
+    
 }
