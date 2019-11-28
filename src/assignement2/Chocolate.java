@@ -12,7 +12,7 @@ public class Chocolate extends Product{
 
     public Chocolate(String nazivProizvoda, String barKod, double cijena, double tezina) {
         super(nazivProizvoda, barKod);
-        this.cijena = cijena + (cijena * POREZ);
+        this.cijena = cijena;
         this.tezina = tezina;
         
     }
@@ -26,9 +26,15 @@ public class Chocolate extends Product{
     }
 
     @Override
+    public double izracunCijene() {
+        double izracun = cijena + (cijena * POREZ);
+        return izracun;
+    }
+
+    @Override
     public String toString() {
         String rezultat = super.toString();
-        return rezultat + "\nKonacna cijena: "+ cijena + "\nTežina: "+ tezina;
+        return rezultat + "\nKonacna cijena: "+ izracunCijene() + "\nTežina: "+ tezina;
     }
     
     

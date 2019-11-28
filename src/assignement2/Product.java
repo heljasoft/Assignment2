@@ -25,6 +25,8 @@ public abstract class Product {
         return barKod;
     }
 
+    public abstract double izracunCijene();
+    
     @Override
     public String toString() {
         return "Ime proizvoda: "+ nazivProizvoda + "\nBar Code: "+ barKod;

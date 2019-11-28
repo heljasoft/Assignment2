@@ -14,7 +14,7 @@ public class Wine extends Product{
 
     public Wine(String nazivProizvoda, String barKod, double cijena, double zapreminaBoce) {
         super(nazivProizvoda, barKod);
-        this.cijena = cijena + (cijena * POREZ) + (cijena * DODATNI_POREZ);
+        this.cijena = cijena;
         this.zapreminaBoce = zapreminaBoce;
     }
 
@@ -27,9 +27,15 @@ public class Wine extends Product{
     }
 
     @Override
+    public double izracunCijene() {
+        double izracun = cijena + (cijena * POREZ) + (cijena * DODATNI_POREZ);
+        return izracun;
+    }
+
+    @Override
     public String toString() {
         String rezultat = super.toString();
-        return rezultat + "\nKonacna cijena: "+ cijena + "\nZapremina boce: "+ zapreminaBoce;
+        return rezultat + "\nKonacna cijena: "+ izracunCijene() + "\nZapremina boce: "+ zapreminaBoce;
     }
     
     
