@@ -8,9 +8,9 @@ package assignement2;
 public class Test {
     public static void main(String[] args) {
         
-        Product chocolate = new Chocolate("Milka", "00387689125", 2.50, 100);
-        System.out.println(chocolate.toString());
-        Product wine = new Wine("Blatina", "00387346981", 13.50, 0.75);
-        System.out.println(wine.toString());
+        Product cokolada = new Chocolate(100, "Milka", "0038758964", 1.70);
+        System.out.println(cokolada.toString());
+        Product vino = new Wine(0.75, "Blatina", "0038795837", 12.30);
+        System.out.println(vino.toString());
     }
 }

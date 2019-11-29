@@ -6,15 +6,17 @@ package assignement2;
  * @author sanel helja
  */
 public abstract class Product {
-    //
-    public static final double POREZ = 0.2;
+    //porez od 20% 
+    public final double POREZ = 1.2;
     
     private String nazivProizvoda;
     private String barKod;
+    private double osnovnaCijena;
     
-    public Product(String nazivProizvoda, String barKod) {
+    public Product(String nazivProizvoda, String barKod, double osnovnaCijena) {
         this.nazivProizvoda = nazivProizvoda;
         this.barKod = barKod;
+        this.osnovnaCijena = osnovnaCijena;
     }
 
     public String getNazivProizvoda() {
@@ -25,7 +27,14 @@ public abstract class Product {
         return barKod;
     }
 
-    public abstract double izracunCijene();
+    public double getOsnovnaCijena() {
+        return osnovnaCijena;
+    }
+    
+    public double ukupnaCijena(){
+        double rezultat = osnovnaCijena * POREZ;
+        return rezultat;
+    }
     
     @Override
     public String toString() {

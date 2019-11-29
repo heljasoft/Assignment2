@@ -7,18 +7,11 @@ package assignement2;
  */
 public class Chocolate extends Product{
     
-    private double cijena;
     private double tezina;
 
-    public Chocolate(String nazivProizvoda, String barKod, double cijena, double tezina) {
-        super(nazivProizvoda, barKod);
-        this.cijena = cijena;
+    public Chocolate(double tezina, String nazivProizvoda, String barKod, double osnovnaCijena) {
+        super(nazivProizvoda, barKod, osnovnaCijena);
         this.tezina = tezina;
-        
-    }
-
-    public double getCijena() {
-        return cijena;
     }
 
     public double getTezina() {
@@ -26,15 +19,14 @@ public class Chocolate extends Product{
     }
 
     @Override
-    public double izracunCijene() {
-        double izracun = cijena + (cijena * POREZ);
-        return izracun;
+    public double ukupnaCijena() {
+        return super.ukupnaCijena(); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public String toString() {
         String rezultat = super.toString();
-        return rezultat + "\nKonacna cijena: "+ izracunCijene() + "\nTežina: "+ tezina;
+        return rezultat + "\nKonacna cijena: "+ ukupnaCijena() + "\nTežina: "+ tezina;
     }
     
     
