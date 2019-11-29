@@ -38,7 +38,7 @@ public abstract class Product {
     
     @Override
     public String toString() {
-        return "Ime proizvoda: "+ nazivProizvoda + "\nBar Code: "+ barKod;
+        return "Ime proizvoda: "+ nazivProizvoda + "\nBar Code: "+ barKod + "\nKonacna cijena: "+ ukupnaCijena();
     }
     
     

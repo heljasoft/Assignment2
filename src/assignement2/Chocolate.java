@@ -19,14 +19,9 @@ public class Chocolate extends Product{
     }
 
     @Override
-    public double ukupnaCijena() {
-        return super.ukupnaCijena(); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public String toString() {
         String rezultat = super.toString();
-        return rezultat + "\nKonacna cijena: "+ ukupnaCijena() + "\nTežina: "+ tezina;
+        return rezultat + "\nTežina: "+ tezina;
     }
     
     

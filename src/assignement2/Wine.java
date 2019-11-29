@@ -30,8 +30,6 @@ public class Wine extends Product{
     @Override
     public String toString() {
         String rezultat = super.toString();
-        return rezultat + "\nKonacna cijena: "+ ukupnaCijena() + "\nZapremina boce: "+ zapreminaBoce;
+        return rezultat + "\nZapremina boce: "+ zapreminaBoce;
     }
-    
-    
 }
